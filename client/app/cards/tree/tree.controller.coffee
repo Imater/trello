@@ -1,4 +1,4 @@
 'use strict'
-
-angular.module('trelloApp').controller 'TreeCtrl', ($scope) ->
-  $scope.message = 'Hello'
+angular.module('trelloApp').controller 'TreeCtrl', ($scope, treeSrv, $stateParams) ->
+  $scope.trees = treeSrv.get()
+  $scope.$stateParams = $stateParams

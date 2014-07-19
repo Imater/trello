@@ -1,1 +1,23 @@
-Дерево проектов
+<div class="tree-wrap">
+    <h5>Дерево проектов:</h5>
+        <div ng-if="tree = trees">
+            <div ng-include="'/tree-line.html'"></div>
+        </div>
+</div>
+
+
+<script type="text/ng-template" id="/tree-line.html">
+    <div class="tree-line">
+        <a class="title-wrap"
+           ng-class="{active:$stateParams.id==tree.id}"
+           ui-sref="cards.tree({id:tree.id})">
+            <span class="title">{{tree.title}}</span>
+            <span ng-if="tree.childs.length">({{tree.childs.length}})</span>
+        </a>
+        <ul class="tree-ul" ng-if="tree.childs">
+            <li ng-repeat="tree in tree.childs">
+                <div ng-include="'/tree-line.html'"></div>
+            </li>
+        </ul>
+    </div>
+</script>

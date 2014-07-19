@@ -2,7 +2,7 @@
 
 angular.module('trelloApp').config ($stateProvider) ->
   $stateProvider.state 'cards.tree',
-    url: '/tree'
+    url: '/tree/:id'
     views:
       'treeView':
         templateUrl : 'app/cards/tree/tree.html'
