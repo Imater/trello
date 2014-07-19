@@ -14,14 +14,30 @@ class Tree
   constructor: (title) ->
     @title = title || 'Новый проект'
     @id = Id.get()
+    @parents = []
     @childs = []
     @path = []
+    @level = 0
   addChild: (tree) ->
     @childs.push tree
     tree.level = @level + 1
-    #tree.parent = @
-    #tree.path = @path.concat [@]
+    tree.parent = @
+    tree.path = @path.concat [@]
     tree
+  getFind: (answer = [], mapFn)->
+    answer.push result if mapFn and (result = mapFn(@))
+    for child in @childs
+      child.getFind(answer, mapFn)
+    answer
+  getCount: ()->
+    @getFind( [], (el)->
+      el.id
+    ).length
+  getPath: (parents = [])->
+    if @parent
+      parents.push @parent.title
+      @parent.getPath parents
+    parents
 
 
 
@@ -29,6 +45,8 @@ angular.module('trelloApp').service 'treeSrv', ->
   # AngularJS will instantiate a singleton by calling 'new' on this function
   main = undefined
   treeSrv =
+    _Tree: Tree
+
     get: ()->
       if !main
         main = @load()

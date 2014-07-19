@@ -403,7 +403,10 @@ module.exports = (grunt) ->
       unit:
         configFile: "karma.conf.coffee"
         singleRun: true
-
+      serve:
+        configFile: "karma.conf.coffee"
+        singleRun: false
+        autoWatch: true
     mochaTest:
       options:
         reporter: "spec"
