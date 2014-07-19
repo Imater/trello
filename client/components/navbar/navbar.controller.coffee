@@ -5,6 +5,9 @@ angular.module 'trelloApp'
   $scope.menu = [
     title: 'Home'
     link: '/'
+  ,
+    title: 'Cards'
+    link: '/cards'
   ]
   $scope.isCollapsed = true
   $scope.isLoggedIn = Auth.isLoggedIn
