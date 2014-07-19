@@ -10,7 +10,7 @@ angular.module 'trelloApp', [
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
   $urlRouterProvider
-  .otherwise '/'
+  .otherwise '/cards/tree'
 
   $locationProvider.html5Mode true
   $httpProvider.interceptors.push 'authInterceptor'

@@ -7,7 +7,7 @@ angular.module 'trelloApp'
     link: '/'
   ,
     title: 'Cards'
-    link: '/cards'
+    link: '/cards/tree'
   ]
   $scope.isCollapsed = true
   $scope.isLoggedIn = Auth.isLoggedIn
