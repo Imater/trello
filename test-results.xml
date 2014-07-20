@@ -1,24 +1,26 @@
 <?xml version="1.0"?>
 <testsuites>
-  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-07-20T09:51:30" id="0" hostname="macbook-pro.dlink">
+  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-07-20T10:19:42" id="0" hostname="macbook-pro.dlink">
     <properties>
       <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.7 Safari/534.34"/>
     </properties>
   </testsuite>
-  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-07-20T09:51:31" id="0" hostname="macbook-pro.dlink" tests="17" errors="0" failures="1" time="0.136">
+  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-07-20T10:19:42" id="0" hostname="macbook-pro.dlink" tests="12" errors="0" failures="1" time="0.092">
     <properties>
       <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.7 Safari/534.34"/>
     </properties>
-    <testcase name="should ..." time="0.036" classname="PhantomJS 1.9.7 (Mac OS X).Controller: CardsCtrl"/>
+    <testcase name="should ..." time="0.029" classname="PhantomJS 1.9.7 (Mac OS X).Controller: CardsCtrl"/>
     <testcase name="should ..." time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Controller: HistoryCtrl"/>
-    <testcase name="should ..." time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Controller: StageCtrl"/>
-    <testcase name="should do something" time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Service: StageSrv"/>
-    <testcase name="should do something" time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Service: Task">
-      <failure type="">Error: [$injector:unpr] Unknown provider: taskProvider &lt;- task
-http://errors.angularjs.org/1.2.20/$injector/unpr?p0=taskProvider%20%3C-%20task
+    <testcase name="should ..." time="0.006" classname="PhantomJS 1.9.7 (Mac OS X).Controller: StageCtrl"/>
+    <testcase name="should do something" time="0.005" classname="PhantomJS 1.9.7 (Mac OS X).Service: StageSrv">
+      <failure type="">Error: [$injector:unpr] Unknown provider: HierarhyProvider &lt;- Hierarhy &lt;- Stage
+http://errors.angularjs.org/1.2.20/$injector/unpr?p0=HierarhyProvider%20%3C-%20Hierarhy%20%3C-%20Stage
     at /Users/iBook/webapps/trello/client/bower_components/angular/angular.js:3754
     at getService (/Users/iBook/webapps/trello/client/bower_components/angular/angular.js:3882)
     at /Users/iBook/webapps/trello/client/bower_components/angular/angular.js:3759
+    at getService (/Users/iBook/webapps/trello/client/bower_components/angular/angular.js:3882)
+    at invoke (/Users/iBook/webapps/trello/client/bower_components/angular/angular.js:3909)
+    at /Users/iBook/webapps/trello/client/bower_components/angular/angular.js:3760
     at getService (/Users/iBook/webapps/trello/client/bower_components/angular/angular.js:3882)
     at invoke (/Users/iBook/webapps/trello/client/bower_components/angular/angular.js:3909)
     at workFn (/Users/iBook/webapps/trello/client/bower_components/angular-mocks/angular-mocks.js:2155)
@@ -27,18 +29,14 @@ undefined
       <failure type="">Expected false to be true.
 </failure>
     </testcase>
-    <testcase name="should ..." time="0.01" classname="PhantomJS 1.9.7 (Mac OS X).Controller: TreeCtrl"/>
-    <testcase name="should do something" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="should ..." time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Controller: TreeCtrl"/>
+    <testcase name="should do something" time="0.011" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
     <testcase name="create object with title" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="addChild method" time="0.005" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="many levels in tree" time="0.002" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="find by title" time="0.002" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="getPath testing" time="0.002" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="should attach a list of things to the scope" time="0.006" classname="PhantomJS 1.9.7 (Mac OS X).Controller: MainCtrl"/>
-    <testcase name="should do something" time="0.002" classname="PhantomJS 1.9.7 (Mac OS X).Service: Hierarhy"/>
-    <testcase name="should do something" time="0.041" classname="PhantomJS 1.9.7 (Mac OS X).Service: Id"/>
-    <testcase name="increment" time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Service: Id"/>
-    <testcase name="increment again" time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Service: Id"/>
+    <testcase name="addChild method" time="0.006" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="many levels in tree" time="0.007" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="find by title" time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="getPath testing" time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="should attach a list of things to the scope" time="0.01" classname="PhantomJS 1.9.7 (Mac OS X).Controller: MainCtrl"/>
     <system-out><![CDATA[
 ]]></system-out>
     <system-err/>

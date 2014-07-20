@@ -7,6 +7,7 @@ angular.module 'trelloApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap'
+  'contenteditable'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
   $urlRouterProvider

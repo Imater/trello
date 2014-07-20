@@ -9,11 +9,13 @@
       min-width: 100px;
       background: #EEE;
       padding: 5px 10px 5px 10px;
-      min-height: 200px;
+      min-height: 50px;
       vertical-align: top;
       border-radius: 5px;
       a .title {
-        text-align: center;
+        text-align: left;
+        color: #000;
+        font-weight: bold;
       }
       .task-ul {
         list-style: none;
@@ -25,7 +27,16 @@
           max-width: 150px;
           margin: 10px 0;
           border-radius: 3px;
-          box-shadow: 0px 1px 5px fade(#000, 50%);
+          box-shadow: 0px 1px 2px fade(#000, 50%);
+          cursor: pointer;
+        }
+        .add-task {
+          cursor: pointer;
+        }
+        .editor {
+          cursor: inherit;
+          position: relative;
+          outline: none;
         }
       }
     }

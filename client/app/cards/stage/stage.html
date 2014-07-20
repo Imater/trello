@@ -20,6 +20,26 @@
             <li ng-repeat="task in stage.tasks" class="task-li">
                 {{task.title}}
             </li>
+            <li ng-if="isTaskEditShown(stage)"
+                class="task-li editor editor-{{stage.id}}"
+                contenteditable="true"
+                ng-model="newTask.title">
+            </li>
+            <li class="btn-wrap" ng-if="isTaskEditShown(stage)">
+                <a class="btn btn-success btn-xs"
+                   ng-click="saveTask(stage)">
+                    Save
+                </a>
+                <a class="btn btn-default btn-xs pull-right"
+                   ng-click="cancelAddTask()">
+                    Cancel
+                </a>
+            </li>
+            <li class="add-task"
+                ng-if="!isTaskEditShown(stage)"
+                ng-click="addTask(stage)">
+                Add card...
+            </li>
         </ul>
     </div>
 </script>
