@@ -8,4 +8,8 @@ angular.module('trelloApp').factory 'Stage', (Hierarhy, Id) ->
       @title = values.title || 'To-do'
       @treeId = values.treeId || '1'
       @id = Id.get()
+    addTask: (task)->
+      @tasks = [] if !@tasks
+      @tasks.push task
 
+  Stage

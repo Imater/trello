@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('trelloApp').service 'treeSrv', (Hierarhy, Id, Stage) ->
+angular.module('trelloApp').service 'treeSrv', (Hierarhy, Id, Stage, Task) ->
   # AngularJS will instantiate a singleton by calling 'new' on this function
 
 
@@ -12,6 +12,7 @@ angular.module('trelloApp').service 'treeSrv', (Hierarhy, Id, Stage) ->
     addStage: (stage)->
       @stage = [] if !@stage
       @stage.push stage
+      stage
 
 
 
@@ -35,10 +36,25 @@ angular.module('trelloApp').service 'treeSrv', (Hierarhy, Id, Stage) ->
       main3 = main2.addChild new Tree 'Web-projects'
       miass = main3.addChild new Tree 'Miass'
 
-      miass.addStage new Stage { title: 'Back log', treeId: miass.id }
-      miass.addStage new Stage { title: 'To-do', treeId: miass.id }
-      miass.addStage new Stage { title: 'Doing', treeId: miass.id }
-      miass.addStage new Stage { title: 'Done', treeId: miass.id }
+      stage1 = miass.addStage new Stage { title: 'Back log', treeId: miass.id }
+      stage1.addTask new Task {title: 'Сделать Drag&Drop'}
+      stage1.addTask new Task {title: 'Посмотреть фильм'}
+      stage1.addTask new Task {title: 'Скачать новую операционку'}
+
+      stage1 = miass.addStage new Stage { title: 'To-do', treeId: miass.id }
+      stage1.addTask new Task {title: 'Сделать Drag&Drop'}
+      stage1.addTask new Task {title: 'Посмотреть фильм'}
+
+      stage1 = miass.addStage new Stage { title: 'Doing', treeId: miass.id }
+      stage1.addTask new Task {title: 'Сделать Drag&Drop'}
+
+      stage1 = miass.addStage new Stage { title: 'Done', treeId: miass.id }
+      stage1.addTask new Task {title: 'Сделать Drag&Drop'}
+      stage1.addTask new Task {title: 'Посмотреть фильм'}
+      stage1.addTask new Task {title: 'Скачать новую операционку'}
+      stage1.addTask new Task {title: 'Сделать Drag&Drop'}
+      stage1.addTask new Task {title: 'Посмотреть фильм'}
+      stage1.addTask new Task {title: 'Скачать новую операционку'}
 
       main3 = main3.addChild new Tree 'Trello'
       main3.addStage new Stage { title: 'To-do', treeId: miass.id }
