@@ -1,1 +1,25 @@
-Этапы
+<div class="stages-wrap">
+
+    <div>
+        <ul class="stage-ul" ng-if="stages.length">
+            <li ng-repeat="stage in stages" class="stage-li">
+                <div ng-include="'/stage-column.html'"></div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<script type="text/ng-template" id="/stage-column.html">
+    <div class="stage-line">
+        <a class="title-wrap"
+           ui-sref="cards.tree({id:tree.id})">
+            <div class="title">{{stage.title}}</div>
+        </a>
+        <ul class="task-ul">
+            <li ng-repeat="task in stage.tasks" class="task-li">
+                {{task.title}}
+            </li>
+        </ul>
+    </div>
+</script>
