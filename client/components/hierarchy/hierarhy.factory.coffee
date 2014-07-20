@@ -3,13 +3,13 @@ angular.module('trelloApp').factory 'Hierarhy', ->
   # AngularJS will instantiate a singleton by calling 'new' on this function
   class Hierarchy
     constructor: ()->
-      @parents = []
       @childs = []
       @path = []
       @level = 0
     addChild: (child) ->
       @childs.push child
       child.level = @level + 1
+      @parents = [] if !@parents
       child.parent = @
       child.path = @path.concat [@]
       child

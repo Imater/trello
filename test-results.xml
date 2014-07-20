@@ -1,26 +1,30 @@
 <?xml version="1.0"?>
 <testsuites>
-  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-07-20T05:50:08" id="0" hostname="macbook-pro.dlink">
+  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-07-20T06:46:32" id="0" hostname="macbook-pro.dlink">
     <properties>
       <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.7 Safari/534.34"/>
     </properties>
   </testsuite>
-  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-07-20T05:50:09" id="0" hostname="macbook-pro.dlink" tests="12" errors="0" failures="0" time="0.067">
+  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-07-20T06:46:32" id="0" hostname="macbook-pro.dlink" tests="16" errors="0" failures="0" time="0.139">
     <properties>
       <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.7 Safari/534.34"/>
     </properties>
-    <testcase name="should ..." time="0.025" classname="PhantomJS 1.9.7 (Mac OS X).Controller: CardsCtrl"/>
-    <testcase name="should ..." time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Controller: HistoryCtrl"/>
-    <testcase name="should ..." time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Controller: StageCtrl"/>
+    <testcase name="should ..." time="0.045" classname="PhantomJS 1.9.7 (Mac OS X).Controller: CardsCtrl"/>
+    <testcase name="should ..." time="0.011" classname="PhantomJS 1.9.7 (Mac OS X).Controller: HistoryCtrl"/>
+    <testcase name="should ..." time="0.006" classname="PhantomJS 1.9.7 (Mac OS X).Controller: StageCtrl"/>
+    <testcase name="should do something" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: StageSrv"/>
     <testcase name="should ..." time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Controller: TreeCtrl"/>
-    <testcase name="should do something" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="create object with title" time="0.007" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="addChild method" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="should do something" time="0.01" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="create object with title" time="0.01" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="addChild method" time="0.005" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
     <testcase name="many levels in tree" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="find by title" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="getPath testing" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
-    <testcase name="should attach a list of things to the scope" time="0.005" classname="PhantomJS 1.9.7 (Mac OS X).Controller: MainCtrl"/>
-    <testcase name="should do something" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Hierarhy"/>
+    <testcase name="find by title" time="0.007" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="getPath testing" time="0.005" classname="PhantomJS 1.9.7 (Mac OS X).Service: Tree"/>
+    <testcase name="should attach a list of things to the scope" time="0.01" classname="PhantomJS 1.9.7 (Mac OS X).Controller: MainCtrl"/>
+    <testcase name="should do something" time="0.004" classname="PhantomJS 1.9.7 (Mac OS X).Service: Hierarhy"/>
+    <testcase name="should do something" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Id"/>
+    <testcase name="increment" time="0.01" classname="PhantomJS 1.9.7 (Mac OS X).Service: Id"/>
+    <testcase name="increment again" time="0.003" classname="PhantomJS 1.9.7 (Mac OS X).Service: Id"/>
     <system-out><![CDATA[
 ]]></system-out>
     <system-err/>
